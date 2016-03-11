@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		
+		
+		
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<script src="js/modernizr.custom.js"></script>
+	</head>
+	<body class="nl-blurred">
+		<div class="container demo-1">
+			<!-- Top Navigation -->
+			
+			<header>
+				<h1>Planning a trip? We are here to help you</h1>	
+			</header>
+			<div class="main clearfix">
+				<form id="nl-form" class="nl-form">
+					I feel like visiting
+                    <input type="text" value="" placeholder="any city" data-subline="For example: <em>Bangalore</em> or <em>Mumbai</em>"/>  for 
+                    
+					<select>
+						<option value="1" selected>trekking</option>
+						<option value="2">camping</option>
+						<option value="3">rock climbing</option>
+						<option value="4">cycling</option>
+						<option value="5">skiing</option>
+                        <option value="6">scuba diving</option>
+                        <option value="7">rafting</option>
+                        <option value="8">surfing</option>
+                        <option value="9">paragliding</option>
+                        <option value="10">snorkelling</option>
+                        <option value="11">hot air ballooning</option>
+                        <option value="12">sky diving</option>
+                        <option value="13">bunjee jumping</option>
+					</select>
+					<br />in a
+					<select>
+						<option value="1" selected>cold weather</option>
+						<option value="2">hot weather</option>
+						<option value="3">spring season</option>
+						
+					</select>
+					with 
+					<br /> 
+					<select>
+						<option value="1" selected>a partner</option>
+					 	<option value="2">out a partner</option>
+					 	
+					</select>
+					& I stay in <input type="text" value="" placeholder="any city" data-subline="For example: <em>Bangalore</em> or <em>Mumbai</em>"/>
+					<div class="nl-submit-wrap">
+						<button class="nl-submit" type="submit">Plan my Travel</button>
+					</div>
+					<div class="nl-overlay"></div>
+				</form>
+			</div>
+		</div><!-- /container -->
+		<script src="js/nlform.js"></script>
+		<script>
+			var nlform = new NLForm( document.getElementById( 'nl-form' ) );
+		</script>
+	</body>
+</html>

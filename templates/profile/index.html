@@ -1,0 +1,368 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Name Here</title>
+<!--FONTS-->
+<link href='http://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+<script src="http://code.jquery.com/jquery-2.1.4.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
+   
+	<script type="text/javascript">
+$(document).ready(function () {
+    var map;
+    var elevator;
+    var myOptions = {
+        zoom: 4,
+        center: new google.maps.LatLng(32, 77),
+        mapTypeId: 'terrain',
+		styles: [{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#1ba093"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#00748c"},{"visibility":"on"}]}]
+    };
+    map = new google.maps.Map($('#map-canvas')[0], myOptions);
+
+    var addresses = ['cairo', 'dubai', 'Patna','delhi','kabul'];
+
+    for (var x = 0; x < addresses.length; x++) {
+        $.getJSON('http://maps.googleapis.com/maps/api/geocode/json?address='+addresses[x]+'&sensor=false', null, function (data) {
+            var p = data.results[0].geometry.location
+            var latlng = new google.maps.LatLng(p.lat, p.lng);
+            new google.maps.Marker({
+                position: latlng,
+                map: map
+            });
+
+        });
+    }
+
+});
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
+
+</head>
+
+<body>
+
+<!--THIS IS NAV BAR START-->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <!--TRAVBUD LOGO-->
+      <a class="navbar-brand travbud" href="#"><div style="font-size:1.5vw;font-weight:900; color:#CCC;display:inline;"><span style="text-decoration:overline;">TRA</span><div style="padding-bottom:15px;display:inline;font-size:32px;">V</div><span style="text-decoration:overline;">BUD</span></div></a>
+	  <!--LOGO ENDS-->
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      
+      <form class="navbar-form navbar-left form-inline" role="search">
+        <div class="form-group">
+         <div class="input-group">
+      
+      <input type="text" class="form-control search-box" id="exampleInputAmount" placeholder="Search Travellers, Places, Anything">
+      <div class="input-group-addon">
+      	<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+      </div>
+    </div>
+        </div>
+                
+      </form>
+      
+      <!--<form class="form-inline">
+  <div class="form-group">
+    
+    <div class="input-group">
+      <div class="input-group-addon">$</div>
+      <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
+      <div class="input-group-addon">.00</div>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Transfer cash</button>
+</form>-->
+      
+     
+      
+      <div class="nav navbar-nav navbar-right ">
+      		<a class="navbar-brand" href="#">
+                <img alt="Brand" src="justin.jpg" height="35px" width="35px">
+              </a>
+      </div>
+      <p class="navbar-text navbar-right">Signed in as Mark Otto</p>
+      
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<!--THIS IS NAV BAR END-->
+
+<div class="container-fluid ">
+	<div class="row ">
+    	<div class="col-md-12 map">
+        		<div id="map-canvas"></div>
+            
+        </div>
+        
+        
+    </div>
+	<div class="row" >
+    	<div class="col-md-12 pro-pic " style="margin-left:0px;padding-left:0px;">
+        	<div class="row" style="margin-left:0px;padding-left:0px;">
+                <div class="col-md-2 " style="margin-left:0px;padding-left:0px;">
+                  	<div class="pro-img">
+                    	
+                    </div>
+                    
+                    <div class="pro-img-2">
+                    	Edit Profile
+                    </div>
+                      
+                    
+                </div>
+                <div class="col-md-8 ">
+                    
+                    
+                    <div class="pro-tags">
+                    <h1 style="color:#fff;">Tathagat Nawadia</h1>
+                    <h2>Foodie, Coder, Early Adopter, Explorer</h2>
+                    <h3 style="color:#f6f6f6;"><span style="color:#E9E581;">Visited: </span>Bangalore, Paris, Nairobi, Singapore, Moscow, Patna</h3>
+                    <h3 style="color:#f6f6f6;"><span style="color:#E9E581;">Wants to Visit: </span>Bangalore, Paris, Nairobi, Singapore, Moscow</h3>
+                    </div>
+                    
+                </div>
+                <div class="col-md-2 ">
+                    
+                    
+                </div>
+            
+        </div>
+        
+        
+    </div>
+    <div class="row">
+    	<div class="col-md-12 line">
+        	
+            
+        </div>
+        
+        
+    </div>
+    <div class="row pro-feeds">
+    	
+        <div class="col-md-2">
+        	<div class="dashboard">
+            	<div class="row">
+                	
+            		<div class="col-md-4  dashboard-sqr">
+                    		
+ 							 
+                    		<i class="fa fa-pencil"></i> 
+                    
+                    </div>
+                    
+                    <div class="col-md-4  dashboard-sqr">
+                    		
+ 							 
+                    		<i class="fa fa-pencil"></i> 
+                    
+                    </div>
+				</div>  
+                
+                <div class="row">
+                	
+            		<div class="col-md-4  dashboard-sqr">
+                    		
+ 							 
+                    		<i class="fa fa-pencil"></i> 
+                    
+                    </div>
+                    
+                    <div class="col-md-4  dashboard-sqr">
+                    		
+ 							 
+                    		<i class="fa fa-pencil"></i> 
+                    
+                    </div>
+				</div> 
+                
+                <div class="row">
+                	
+            		<div class="col-md-4  dashboard-sqr">
+                    		
+ 							 
+                    		<i class="fa fa-pencil"></i> 
+                    
+                    </div>
+                    
+                    <div class="col-md-4  dashboard-sqr">
+                    		
+ 							 
+                    		<i class="fa fa-pencil"></i> 
+                    
+                    </div>
+				</div> 
+                
+                <div class="row">
+                	
+            		<div class="col-md-4  dashboard-sqr">
+                    		
+ 							 
+                    		<i class="fa fa-pencil"></i> 
+                    
+                    </div>
+                    
+                    <div class="col-md-4  dashboard-sqr">
+                    		
+ 							 
+                    		<i class="fa fa-pencil"></i> 
+                    
+                    </div>
+				</div> 
+                
+                <div class="row">
+                	
+            		<div class="col-md-4  dashboard-sqr">
+                    		
+ 							 
+                    		<i class="fa fa-pencil"></i> 
+                    
+                    </div>
+                    
+                    <div class="col-md-4  dashboard-sqr">
+                    		
+ 							 
+                    		<i class="fa fa-pencil"></i> 
+                    
+                    </div>
+				</div> 
+                
+         		<div class="row">
+                	
+            		<div class="col-md-10  dashboard-box" >
+                    		
+ 							 
+                    		<i class="fa fa-pencil"></i> &nbsp; BLOG
+                    
+                    </div>
+				</div>  
+                
+                
+                <div class="row" id="fixer">
+                	
+            		<div class="col-md-10  dashboard-box" >
+                    		
+ 							 
+                    		<i class="fa fa-list-ol"></i> &nbsp; PLAN
+                    
+                    </div>
+				</div> 
+                
+            <!--<script>
+			$(document).ready(function(e) {
+				
+				console.log("Hello");
+				var elementPosition = $('#fixer').offset();
+				
+				$(window).scroll(function(){
+						if($(window).scrollTop() > elementPosition.top){
+							  $('#fixer').css('position','fixed').css('top','0');
+						} else {
+							$('#fixer').css('position','static');
+						}    
+				});
+								
+            });
+			
+			</script>-->
+                
+            
+            
+
+            </div>
+        </div>
+        
+        <div class="col-md-7">
+        	<div class="feeds">
+            
+                <div class="row">
+                	<div class="col-md-1  feed-pic">
+                    	<img src="justin.jpg" height="70px" width="70px" alt="profile" />
+                    </div>
+            		<div class="col-md-10  feed-box">
+                    		
+ 							 <p class="feed-title"><small>Subtext for header</small></p>
+							<hr>
+                    		Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit 
+                    
+                    </div>
+				</div>
+                
+                 <div class="row">
+                	<div class="col-md-1  feed-pic">
+                    	<img src="justin.jpg" height="70px" width="70px" alt="profile" />
+                    </div>
+            		<div class="col-md-10  feed-box">
+                    		
+ 							 <p class="feed-title"><small>Subtext for header</small></p>
+							<hr>
+                    		Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit 
+                    
+                    </div>
+				</div>
+                
+                
+                 
+                
+                
+                
+            	
+            </div> 
+        </div>
+        
+        <div class="col-md-3">
+        	<div class="advert">
+            
+            
+            <div class="row">
+                	
+            		<div class="col-md-10  feed-box">
+                    		
+ 							 <p class="feed-title"><small>Subtext for header</small></p>
+							<hr>
+                    		Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit 
+                    
+                    </div>
+				</div>
+            
+            
+           
+                
+           
+                
+            </div>
+        </div>
+        
+        
+        
+        
+        
+    </div>
+</div>
+
+
+</body>
+</html>

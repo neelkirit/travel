@@ -1,0 +1,556 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Name Here</title>
+<!--FONTS-->
+<link href='http://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+<script src="http://code.jquery.com/jquery-2.1.4.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
+   
+	
+
+</head>
+
+<body>
+
+<!--THIS IS NAV BAR START-->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <!--TRAVBUD LOGO-->
+      <a class="navbar-brand travbud" href="#"><div style="font-size:1.5vw;font-weight:900; color:#CCC;display:inline;"><span style="text-decoration:overline;">TRA</span><div style="padding-bottom:15px;display:inline;font-size:32px;">V</div><span style="text-decoration:overline;">BUD</span></div></a>
+	  <!--LOGO ENDS-->
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      
+      <form class="navbar-form navbar-left form-inline" role="search">
+        <div class="form-group">
+         <div class="input-group">
+      
+      <input type="text" class="form-control search-box" id="exampleInputAmount" placeholder="Search Travellers, Places, Anything">
+      <div class="input-group-addon">
+      	<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+      </div>
+    </div>
+        </div>
+                
+      </form>
+      
+      <!--<form class="form-inline">
+  <div class="form-group">
+    
+    <div class="input-group">
+      <div class="input-group-addon">$</div>
+      <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
+      <div class="input-group-addon">.00</div>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Transfer cash</button>
+</form>-->
+      
+     
+      
+      <div class="nav navbar-nav navbar-right ">
+      		<a class="navbar-brand" href="#">
+                <img alt="Brand" src="justin.jpg" height="35px" width="35px">
+              </a>
+      </div>
+      <p class="navbar-text navbar-right">Sign Out</p>
+      
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<!--THIS IS NAV BAR END-->
+
+<div class="container-fluid ">
+	<div class="row ">
+    	<div class="col-md-12 map">
+        		<div id="map-canvas"></div>
+            
+        </div>
+        
+        
+    </div>
+	<div class="row" >
+    	
+    <div class="row">
+    	<div class="col-md-12 line">
+        	
+            
+        </div>
+        
+        
+    </div>
+    <div class="row pro-feeds ">
+    	
+        <div class="col-md-3 search-results" >
+        	<div class="dashboard" id="left" >
+            	<h2 style="margin-left:10px;">Search Blog</h2> 
+                	
+                <div class="row" style="margin-left:0px;">
+                	
+            		<div class="col-md-10  ">
+                    		
+ 							 <h3>Title</h3>
+                    		Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit 
+                    
+                    </div>
+				</div>
+                <div class="row">
+    	<div class="col-md-11 line-2">
+        	
+            
+        </div> 
+          </div>
+          
+          
+          
+          
+                <div class="row" style="margin-left:5px;">
+                	
+            		<div class="col-md-10  ">
+                    		
+ 							 <h3>Title</h3>
+                    		Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit 
+                    
+                    </div>
+				</div>
+                <div class="row">
+    	<div class="col-md-11 line-2">
+        	
+            
+        </div> 
+          </div>
+          
+          
+          
+                <div class="row" style="margin-left:5px;">
+                	
+            		<div class="col-md-10  ">
+                    		
+ 							 <h3>Title</h3>
+                    		Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit 
+                    
+                    </div>
+				</div>
+                <div class="row">
+    	<div class="col-md-11 line-2">
+        	
+            
+        </div> 
+          </div>
+          
+          
+          
+          
+          
+                <div class="row" style="margin-left:5px;">
+                	
+            		<div class="col-md-10  ">
+                    		
+ 							 <h3>Title</h3>
+                    		Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit 
+                    
+                    </div>
+				</div>
+                <div class="row">
+    	<div class="col-md-11 line-2">
+        	
+            
+        </div> 
+          </div>
+          
+          
+          
+          
+          
+                <div class="row" style="margin-left:5px;">
+                	
+            		<div class="col-md-10  ">
+                    		
+ 							 <h3>Title</h3>
+                    		Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit 
+                    
+                    </div>
+				</div>
+                <div class="row">
+    	<div class="col-md-11 line-2">
+        	
+            
+        </div> 
+          </div>
+          
+          
+          
+          
+                <div class="row" style="margin-left:5px;">
+                	
+            		<div class="col-md-10  ">
+                    		
+ 							 <h3>Title</h3>
+                    		Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit 
+                    
+                    </div>
+				</div>
+                <div class="row">
+    	<div class="col-md-11 line-2">
+        	
+            
+        </div> 
+          </div>
+                
+                
+               	 
+                
+                
+                
+               
+                
+                
+                
+                
+                
+                
+                
+               
+                
+                
+                
+                
+                
+                
+               
+                
+                
+                
+        
+            </div>
+        </div>
+        
+        <div class="col-md-6 search-results" style="padding-right:0px;">
+        	<div class="feeds" id="mid">
+            
+            	<h2 >Search People</h2>
+            
+                <div class="row">
+                	
+            		<div class="col-md-10  ">
+                    		
+ 							
+							<h3>Title</h3>
+                    		Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit Lorem ipsum dolor sit 
+                    
+                    </div>
+				</div>
+                
+             <div class="row">
+    	<div class="col-md-11 line-2">
+        	
+            
+        </div> 
+          </div>
+                 <div class="row">
+                	
+            		<div class="col-md-10  ">
+                    		
+ 							<h3>Title</h3>
+                    		Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit 
+                    
+                    </div>
+				</div>
+                <div class="row">
+    	<div class="col-md-11 line-2">
+        	
+            
+        </div> 
+          </div>
+          
+          
+          
+          
+          
+          
+          <div class="row">
+                	
+            		<div class="col-md-10  ">
+                    		
+ 							
+							<h3>Title</h3>
+                    		Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit Lorem ipsum dolor sit 
+                    
+                    </div>
+				</div>
+                
+             <div class="row">
+    	<div class="col-md-11 line-2">
+        	
+            
+        </div> 
+          </div>
+          <div class="row">
+                	
+            		<div class="col-md-10  ">
+                    		
+ 							
+							<h3>Title</h3>
+                    		Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit Lorem ipsum dolor sit 
+                    
+                    </div>
+				</div>
+                
+             <div class="row">
+    	<div class="col-md-11 line-2">
+        	
+            
+        </div> 
+          </div>
+          <div class="row">
+                	
+            		<div class="col-md-10  ">
+                    		
+ 							
+							<h3>Title</h3>
+                    		Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit Lorem ipsum dolor sit 
+                    
+                    </div>
+				</div>
+                
+             <div class="row">
+    	<div class="col-md-11 line-2">
+        	
+            
+        </div> 
+          </div>
+          <div class="row">
+                	
+            		<div class="col-md-10  ">
+                    		
+ 							
+							<h3>Title</h3>
+                    		Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit Lorem ipsum dolor sit 
+                    
+                    </div>
+				</div>
+                
+             <div class="row">
+    	<div class="col-md-11 line-2">
+        	
+            
+        </div> 
+          </div>
+          <div class="row">
+                	
+            		<div class="col-md-10  ">
+                    		
+ 							
+							<h3>Title</h3>
+                    		Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit Lorem ipsum dolor sit ameit Lorem ipsum dolor sit 
+                    
+                    </div>
+				</div>
+                
+             <div class="row">
+    	<div class="col-md-11 line-2">
+        	
+            
+        </div> 
+          </div>
+                
+                 
+                
+                
+                
+            	
+            </div> 
+        </div>
+        
+        <div class="col-md-3 search-results" style="padding-left:0px;">
+        	<div class="advert" id="right" >
+            <h2 style="margin-left:10px;">Search Stores</h2>
+            
+            
+            
+            <div class="row" style="margin-left:0px;">
+                	
+            		<div class="col-md-10">
+                    		
+ 							<h3>Title</h3>
+                    		Lorem ipsum dolor sit ameit 
+                    
+                    </div>
+				</div>
+            
+            
+            
+            
+             <div class="row">
+    	<div class="col-md-11 line-2">
+        	
+            
+        </div> 
+          </div>
+          
+          
+          
+            <div class="row">
+                	
+            		<div class="col-md-10">
+                    		
+ 							<h3>Title</h3>
+                    		Lorem ipsum dolor sit ameit 
+                    
+                    </div>
+				</div>
+            
+             <div class="row">
+    	<div class="col-md-11 line-2">
+        	
+            
+        </div> 
+          </div>
+          
+          
+          
+            <div class="row">
+                	
+            		<div class="col-md-10">
+                    		
+ 							<h3>Title</h3>
+                    		Lorem ipsum dolor sit ameit 
+                    
+                    </div>
+				</div>
+            
+             <div class="row">
+    	<div class="col-md-11 line-2">
+        	
+            
+        </div> 
+          </div>
+          
+          
+          
+            <div class="row">
+                	
+            		<div class="col-md-10">
+                    		
+ 							<h3>Title</h3>
+                    		Lorem ipsum dolor sit ameit 
+                    
+                    </div>
+				</div>
+            
+             <div class="row">
+    	<div class="col-md-11 line-2">
+        	
+            
+        </div> 
+          </div>
+          
+          
+            <div class="row">
+                	
+            		<div class="col-md-10">
+                    		
+ 							<h3>Title</h3>
+                    		Lorem ipsum dolor sit ameit 
+                    
+                    </div>
+				</div>
+            
+             <div class="row">
+    	<div class="col-md-11 line-2">
+        	
+            
+        </div> 
+          </div>
+          
+          
+            <div class="row">
+                	
+            		<div class="col-md-10">
+                    		
+ 							<h3>Title</h3>
+                    		Lorem ipsum dolor sit ameit 
+                    
+                    </div>
+				</div>
+            
+             <div class="row">
+    	<div class="col-md-11 line-2">
+        	
+            
+        </div> 
+          </div>
+          
+          
+            <div class="row">
+                	
+            		<div class="col-md-10">
+                    		
+ 							<h3>Title</h3>
+                    		Lorem ipsum dolor sit ameit 
+                    
+                    </div>
+				</div>
+            
+             <div class="row">
+    	<div class="col-md-11 line-2">
+        	
+            
+        </div> 
+          </div>
+          
+          
+            <div class="row">
+                	
+            		<div class="col-md-10">
+                    		
+ 							<h3>Title</h3>
+                    		Lorem ipsum dolor sit ameit 
+                    
+                    </div>
+				</div>
+            
+             <div class="row">
+    	<div class="col-md-11 line-2">
+        	
+            
+        </div> 
+          </div>
+            
+           
+                
+           
+                
+            </div>
+        </div>
+        
+        
+        
+        
+        
+    </div>
+</div>
+
+
+</body>
+</html>

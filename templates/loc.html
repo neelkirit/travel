@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+        <head>
+            <title>something something</title>
+            <script src="https://maps.googleapis.com/maps/api/js?sensor=false&libraries=places"></script>
+			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        </head>
+        <body>
+            
+			<script type="text/javascript">
+$(function(){
+
+  $('#tags input').on('focusout',function(){    
+    var txt= this.value.replace(/[^a-zA-Z0-9\+\-\.\#]/g,'');
+    if(txt) {
+		$('#searchTextField').val($('#searchTextField').val() + '<span class="tag">'+ txt.toLowerCase() +'</span>');
+     // $(this).before('<span class="tag">'+ txt.toLowerCase() +'</span>');
+    }
+    this.value="";
+  }).on('keyup',function( e ){
+    // if: comma,enter (delimit more keyCodes with | pipe)
+    if(/(188|13)/.test(e.which)) $(this).focusout();     
+  });
+
+  $('#tags').on('click','.tag',function(){
+     if(confirm("Really delete this tag?")) $(this).remove(); 
+  });
+
+});
+</script>
+
+
+
+
+
+
+<div id="tags">
+<label for="searchTextField">Please insert city:</label>
+
+            <input id="searchTextField" type="text" size="50">
+</div>
+
+
+
+
+			
+<script type="text/javascript">		
+function initialize() {
+    var input = document.getElementById('searchTextField');
+    var options = {types: ['(cities)']};//componentRestrictions: {country: 'ind'}};
+                 
+    new google.maps.places.Autocomplete(input, options);
+}
+             
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+
+<style>
+  #tags{
+  float:left;
+  border:1px solid #ccc;
+  padding:5px;
+  font-family:Arial;
+}
+#tags span.tag{
+  cursor:pointer;
+  display:block;
+  float:left;
+  color:#fff;
+  background:#689;
+  padding:5px;
+  padding-right:25px;
+  margin:4px;
+}
+#tags span.tag:hover{
+  opacity:0.7;
+}
+#tags span.tag:after{
+ position:absolute;
+ content:"x";
+ border:1px solid;
+ padding:0 4px;
+ margin:3px 0 10px 5px;
+ font-size:10px;
+}
+#tags input{
+  background:#eee;
+  border:0;
+  margin:4px;
+  padding:7px;
+  width:auto;
+}
+</style>
+
+
+        </body>
+</html>
